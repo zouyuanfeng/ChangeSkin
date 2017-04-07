@@ -1,28 +1,13 @@
 package com.zhy.changeskin.base;
 
 import android.content.Context;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.util.ArrayMap;
 import android.support.v4.view.LayoutInflaterCompat;
 import android.support.v4.view.LayoutInflaterFactory;
-import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.AppCompatDelegate;
-import android.support.v7.internal.app.AppCompatViewInflater;
-import android.support.v7.widget.AppCompatAutoCompleteTextView;
-import android.support.v7.widget.AppCompatButton;
-import android.support.v7.widget.AppCompatCheckBox;
-import android.support.v7.widget.AppCompatCheckedTextView;
-import android.support.v7.widget.AppCompatEditText;
-import android.support.v7.widget.AppCompatMultiAutoCompleteTextView;
-import android.support.v7.widget.AppCompatRadioButton;
-import android.support.v7.widget.AppCompatRatingBar;
-import android.support.v7.widget.AppCompatSpinner;
-import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 import android.view.InflateException;
 import android.view.LayoutInflater;
@@ -33,7 +18,6 @@ import com.zhy.changeskin.attr.SkinAttr;
 import com.zhy.changeskin.attr.SkinAttrSupport;
 import com.zhy.changeskin.attr.SkinView;
 import com.zhy.changeskin.callback.ISkinChangedListener;
-import com.zhy.changeskin.utils.L;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -123,6 +107,7 @@ public class BaseSkinActivity extends AppCompatActivity implements ISkinChangedL
         //do some skin inject
         if (skinAttrList.size() != 0)
         {
+
             List<SkinView> skinViews = SkinManager.getInstance().getSkinViews(this);
             if (skinViews == null)
             {

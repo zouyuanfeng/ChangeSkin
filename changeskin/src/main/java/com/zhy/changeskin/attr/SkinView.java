@@ -10,8 +10,8 @@ import java.util.List;
 public class SkinView
 {
 //    SoftReference<View> viewRef;
-    View view ;
-    List<SkinAttr> attrs;
+    private View view ;
+    private List<SkinAttr> attrs;
 
     public SkinView(View view, List<SkinAttr> skinAttrs)
     {

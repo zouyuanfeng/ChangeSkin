@@ -14,6 +14,7 @@ public class MyApplication extends Application
     public void onCreate()
     {
         super.onCreate();
+//        setTheme(R.style.AppThemeDark);
         SkinManager.getInstance().init(this);
     }
 }

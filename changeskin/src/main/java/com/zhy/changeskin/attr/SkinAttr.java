@@ -5,20 +5,17 @@ import android.view.View;
 /**
  * Created by zhy on 15/9/22.
  */
-public class SkinAttr
-{
-    String resName;
-    SkinAttrType attrType;
+public class SkinAttr {
+    private String resName;
+    private SkinAttrType attrType;
 
 
-    public SkinAttr(SkinAttrType attrType, String resName)
-    {
+    SkinAttr(SkinAttrType attrType, String resName) {
         this.resName = resName;
         this.attrType = attrType;
     }
 
-    public void apply(View view)
-    {
+    void apply(View view) {
         attrType.apply(view, resName);
     }
 }
